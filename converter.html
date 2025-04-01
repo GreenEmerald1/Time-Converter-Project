@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Converter Project ! - FADLI EL MAHDI</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="converter.css" />
+  </head>
+  <body>
+    
+    <header class ="header">
+      <div class="logo">
+        <h1 class="name">Time Converter<i class="fa-regular fa-clock" id="clockheader">
+        </i></h1>
+      </div>
+      <div class="socialmedia">
+        <a href="https://www.linkedin.com/in/el-mahdi-fadli-b06792328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin" id="linkedinid" ></i></a>
+        <i class="fa-brands fa-facebook"></i>
+        <a href="https://github.com/GreenEmerald1"><i class="fa-brands fa-github"></i></a>
+      </div>
+
+    </header>
+    <div class="content">
+      <div class="card">
+        <div class="clockwrapper">
+          <i class="fa-regular fa-clock" id="clockicon">
+          </i>
+          <i class="fa-solid fa-earth-africa" id="clockicon2"></i>
+        </div>
+        <div class="text">
+          <h1 class="nameapp">
+            ⏰🌐 Time Converter ⏳🔄 
+          </h1>
+          <h2 class="description">
+            🌍✨ Discover the world 🌎✨ 
+          </h2>
+          <h3 class="descripption2">
+            ⏳ Use Time Converter 🕒 to display <span>+24 country </span> 🗺️ present time! ⏰🎯
+          </h3>
+        </div>
+        <div class="work">
+          <div class="formwrapper">
+            <h4 class="formtextlocal">
+              🕰️ Enter your local time ⏱️: 
+            </h4>
+            <form class="myform">
+              
+              <input type="text" id="Ltime" name="Ltime" placeholder="Ex : +1">
+              <button onclick="getuserinput()" class="submitbutton" type="button">Submit</button>
+            </form>
+
+          </div>
+          <div class="entercountry">
+            <h4 class="namecapital">
+              🌍 Enter a Capital Name 🏙️:
+            </h4>
+            <form class="myform">
+              <input type="text" id="Cname" name="Cname" placeholder="Ex : Tokyo" list="location">
+              <datalist id = "location">
+                
+             </datalist>
+              <button onclick="getuserCapitale()" class="submitbutton" type="button">Submit</button>
+            </form>
+          </div>
+          <div class="reponse">
+            <p id="texttime">
+
+            </p>
+            <p id="display">
+
+            </p>
+          </div>
+          </div>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+
+   
+    
+    
+    <script>
+      
+      const capitalstime = {"alger" : 0,"buenos aires" : -4, "vienna " : 0, "baku" : 3, "manama": 2,"dhaka": 5, "brussels":0, 
+        "brasilia" : -4, "ouagadougou" : -1, "praia": -2, "yaoundé" : 0, "ottawa" : -6, "beijing" : 7, "bogota" : -6, "brazzaville": 0, "kinshasa": 0,
+         "san jose" : -7, "yamoussoukro" : -1, "zagreb" : 0, "havana" : -6, "prague" : 0, "copenhagen" : 0, "djibouti" : 2, "quito" : -6, "cairo" : 1,
+          "san salvador" : -7 , "malabo" : 0, "addis ababa" : 2, "helsinki" : 1, "paris" : 0, "liberville" : 0, "banjul" : -1, "tbilisi" : 3, "berlin" : 0,
+           "accra" : -1, "gibraltar" : 0, "athens" : 1, "nuuk" : -3 , "conakry" : -1, "bissau" : -1, "budapest" : 0, "new delhi" : 4, "jakarta" : 6, 
+           "tehran" : 2.5 , "baghdad" : 2, "dublin" : -1, "qods" : 1, "rome" : 0, "kingston" : -6, "tokyo" : 8, "amman" : 2, "kuwait" : 2, "beirut" : 1, "kuala lumpur" : 7,
+            "mexico" : -7, "monako" : 0, "rabat" : 0, "amsterdam" : 0, "abuja" : 0, "oslo" : 0, "maskate" : 3, "lima" : -6, "lisbon" : -1, "doha" : 2, "bukharest" : 1,
+             "moskow" : 2, "riyadh" : 2, "dakar" : -1, "singapore" : 7, "pretoria" : 1, "seoul" : 8, "madrid" : 0, "khartoum" : 1, "stockholm" : 0, "bern" : 0, "damas" : 2,
+              "bangkok": 6, "lomé" : -1, "tunis" : 0, "ankara" : 2, "kyiv" : 1, 
+         "abudhabi" : 3, "london" : -1, "montevideo" : -4, "tashkent" : 4, "caracas" : -5, "hanoi" : 6, "sana" : 2} ;
+      for(let key in capitalstime){
+        capitalstime[key] ++;
+      }
+         function addHours(time, hoursToAdd) {
+            // Séparer les heures et les minutes du format donné
+            let [hours, minutes] = time.split(':').map(Number);
+
+            // Ajouter les heures
+            hours += hoursToAdd;
+
+            // Retourner le résultat formaté
+            return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+          }
+          function subtractHours(time, hoursToSubtract) {
+            // Séparer les heures et les minutes du format donné
+            let [hours, minutes] = time.split(':').map(Number);
+
+            // Soustraire les heures
+            hours -= hoursToSubtract;
+
+            // Gérer le cas où les heures deviennent négatives
+            if (hours < 0) {
+              hours = 0; // Empêcher les heures négatives (tu peux ajuster selon le besoin)
+            }
+
+            // Retourner le résultat formaté
+            return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`;
+          }
+
+          function getuserCapitale() {
+    let localtime = Number(document.getElementById("Ltime").value); // Convertir en nombre
+    let now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let format1 = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`; // Format HH:MM
+    let capitalname = (document.getElementById("Cname").value).toLowerCase();
+
+    if (!(capitalname in capitalstime)) {
+        document.getElementById("texttime").innerHTML = "Capital not found.";
+        return;
+    }
+
+    let capitalOffset = capitalstime[capitalname];
+    let finalTime;
+
+    if (localtime < 0) {
+        if (capitalOffset < 0) {
+            let intermediate = subtractHours(format1, Math.abs(capitalOffset));
+            finalTime = subtractHours(intermediate, Math.abs(localtime));
+        } else {
+            let intermediate = addHours(format1, capitalOffset);
+            finalTime = subtractHours(intermediate, Math.abs(localtime));
+        }
+    } else {
+        if (capitalOffset < 0) {
+            let intermediate = subtractHours(format1, Math.abs(capitalOffset));
+            finalTime = addHours(intermediate, localtime);
+        } else {
+            let intermediate = addHours(format1, capitalOffset);
+            finalTime = addHours(intermediate, localtime);
+        }
+    }
+    capitalname = capitalname.charAt(0).toUpperCase() + capitalname.slice(1);
+    document.getElementById("texttime").innerHTML = `⏳🌍 ${capitalname} time now is :🕒 ${finalTime} ⏰🎯`;
+}
+const sortedKeys = Object.keys(capitalstime).sort();
+for(let key of sortedKeys){
+  document.getElementById("location").innerHTML += `<option value=${key}>`;
+  }  
+
+    </script>
+  </body>
+</html>

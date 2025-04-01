@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Merienda:wght@300..900&family=Yatra+One&display=swap');
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+  font-family: Merienda, serif;
+  color : cyan;
+
+}
+.name{
+  font-size: 20px;
+  margin : 50px;
+  margin-top: 50px;
+  
+}
+.nameapp{
+  border-bottom: 2px solid cyan;
+  width : auto;
+  
+  
+}
+.header{
+  margin : 2px;
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  color : cyan;
+  border-radius: 2px;
+  height : 50px;
+  font-size: 20px;
+  border-bottom: 3px solid cyan;
+ 
+  
+}
+.socialmedia{
+  display : flex;
+}
+.socialmedia i{
+  margin-left : 10px;
+  margin-right: 10px;
+  font-size: 25px;
+}
+#linkedinid{
+  font-size: 26px;
+  
+  
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  padding : 0;
+  
+  height : auto;
+  
+}
+a{
+  color : cyan;
+}
+.card{
+  background-color: black;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  border : 1px solid ;
+  width : 70%;
+  display: flex;
+  flex-direction: column;
+  border : 2px solid cyan;
+  box-shadow: 4px 4px 5px black;
+  box-shadow: -4px -4px 5px black;
+  border-radius: 10px;
+  
+  min-width: 400px;
+  
+  
+  box-shadow: 2px 2px 5px cyan,
+              -2px -2px 5px cyan,
+              -2px 2px 5px cyan,
+              2px -2px 5px cyan;
+  height : auto;
+  
+  
+}
+.clockwrapper{
+  
+  display: flex;
+  overflow-wrap: anywhere;
+  justify-content: center;
+  height : 150px;
+  align-items: center;
+}
+#clockicon{
+  font-size: 100px;
+  color : cyan;
+}
+.text h1{
+ 
+  color : cyan;
+  
+  width : 500px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px cyan,
+              -2px -2px 5px cyan,
+              -2px 2px 5px cyan,
+              2px -2px 5px cyan;
+  
+  font-size: 35px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  
+
+}
+.text h2{
+  color : antiquewhite;
+  margin-left: 30px;
+  
+}
+.text h3{
+  margin-left: 30px;
+}
+.reponse{
+  height: auto;
+}
+.text h3 span{
+  color : red;
+}
+#clockicon2{
+  font-size: 100px;
+  color : cyan;
+  margin-left: 30px;
+}
+#clockheader{
+  font-size: 15px;
+  margin-left: 5px;
+}
+#texttime{
+  height : auto;
+}
+.text{
+  margin-bottom: 40px;
+}
+.formtextlocal{
+  color : antiquewhite;
+  margin-left: 30px;
+  margin-bottom : 15px;
+  border-bottom: 2px solid white ;
+  width : 220px;
+  
+}
+.myform{
+  margin-left : 30px;
+  color : antiquewhite;
+}
+input{
+  border : 2px solid cyan;
+  background-color: black;
+  border-radius : 5px;
+  
+  font-family: Merienda, serif;
+  color : cyan;
+  margin-bottom: 30px;
+  
+}
+.namecapital{
+  margin-left: 30px;
+  color : antiquewhite;
+  border-bottom: 2px solid white ;
+  width : 230px;
+  margin-bottom: 15px;
+}
+
+.submitbutton{
+  border-radius: 5px;
+  font-family: Merienda;
+  height : 24px;
+  width : 50px;
+  background-color: black;
+  color : cyan ;
+  border : 2px solid 
+  
+}
+.submitbutton:hover{
+  background-color: cyan;
+  color : black;
+
+
+}
+.reponse{
+  
+  height : auto;
+  display : flex;
+  justify-content: space-between;
+  
+}
+
+
+.countrytime{
+  width : 50%;
+  height : 200px;
+  border : 2px solid white;
+  display : flex; 
+  justify-content: center;
+  align-items: center; 
+}
+.textcontainer{
+  border : 2px solid white;
+
+
+  
+}
+.reponse{
+  display: flex;
+  justify-content: center;
+}
+#texttime{
+  height : 50px;
+  width : auto;
+  color : cyan;
+  font-size: 24px;
+  text-align: center;
+  
+}
