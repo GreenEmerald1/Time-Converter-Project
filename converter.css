@@ -102,7 +102,8 @@ a{
  
   color : cyan;
   
-  width : 500px;
+  max-width : 500px;
+  width : auto;
   border-radius: 10px;
   box-shadow: 2px 2px 5px cyan,
               -2px -2px 5px cyan,
