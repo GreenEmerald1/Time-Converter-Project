@@ -85,19 +85,17 @@
     
     <script>
       
-      const capitalstime = {"alger" : 0,"buenos aires" : -4, "vienna " : 0, "baku" : 3, "manama": 2,"dhaka": 5, "brussels":0, 
-        "brasilia" : -4, "ouagadougou" : -1, "praia": -2, "yaoundé" : 0, "ottawa" : -6, "beijing" : 7, "bogota" : -6, "brazzaville": 0, "kinshasa": 0,
-         "san jose" : -7, "yamoussoukro" : -1, "zagreb" : 0, "havana" : -6, "prague" : 0, "copenhagen" : 0, "djibouti" : 2, "quito" : -6, "cairo" : 1,
-          "san salvador" : -7 , "malabo" : 0, "addis ababa" : 2, "helsinki" : 1, "paris" : 0, "liberville" : 0, "banjul" : -1, "tbilisi" : 3, "berlin" : 0,
-           "accra" : -1, "gibraltar" : 0, "athens" : 1, "nuuk" : -3 , "conakry" : -1, "bissau" : -1, "budapest" : 0, "new delhi" : 4, "jakarta" : 6, 
-           "tehran" : 2.5 , "baghdad" : 2, "dublin" : -1, "qods" : 1, "rome" : 0, "kingston" : -6, "tokyo" : 8, "amman" : 2, "kuwait" : 2, "beirut" : 1, "kuala lumpur" : 7,
-            "mexico" : -7, "monako" : 0, "rabat" : 0, "amsterdam" : 0, "abuja" : 0, "oslo" : 0, "maskate" : 3, "lima" : -6, "lisbon" : -1, "doha" : 2, "bukharest" : 1,
-             "moskow" : 2, "riyadh" : 2, "dakar" : -1, "singapore" : 7, "pretoria" : 1, "seoul" : 8, "madrid" : 0, "khartoum" : 1, "stockholm" : 0, "bern" : 0, "damas" : 2,
-              "bangkok": 6, "lomé" : -1, "tunis" : 0, "ankara" : 2, "kyiv" : 1, 
-         "abudhabi" : 3, "london" : -1, "montevideo" : -4, "tashkent" : 4, "caracas" : -5, "hanoi" : 6, "sana" : 2} ;
-      for(let key in capitalstime){
-        capitalstime[key] ++;
-      }
+      const capitalstime = {"alger" : 1,"buenos_aires" : -3, "vienna" : 2, "baku" : 4, "manama": 3,"dhaka": 6, "brussels":2, 
+        "brasilia" : -3, "ouagadougou" : 0, "praia": -1, "yaoundé" : 1, "ottawa" : -4, "beijing" : 8, "bogota" : -5, "brazzaville": 1, "kinshasa": 1,
+         "san_jose" : -7, "yamoussoukro" : 0, "zagreb" : 2, "havana" : -4, "prague" : 2, "copenhague" : 2, "djibouti" : 3, "quito" : -5, "cairo" : 2,
+          "san_salvador" : -6 , "malabo" : 1, "addis_abeba" : 3, "helsinki" : 3, "paris" : 2, "liberville" : 1, "banjul" : 0, "tbilisi" : 4, "berlin" : 2,
+           "accra" : -2, "gibraltar" : 2, "athens" : 3, "nuuk" : -1 , "conakry" : 0, "bissau" : 0, "budapest" : 2, "new delhi" : 6, "jakarta" : 7, 
+           "tehran" : 3.5 , "baghdad" : 3, "dublin" : 0, "qods" : 2, "rome" : 2, "kingston" : -5, "tokyo" : 8, "amman" : 3, "kuwait" : 3, "beirut" : 3, "kuala_lumpur" : 8,
+            "mexico" : -6, "monako" : 2, "rabat" : 0, "amsterdam" : 2, "abuja" : 1, "oslo" : 2, "mascate" : 4, "lima" : -5, "lisbon" : 1, "doha" : 3, "bukharest" : 3,
+             "moskow" : 3, "riyadh" : 3, "dakar" : 0, "singapore" : 8, "pretoria" : 2, "seoul" : 9, "madrid" : 2, "khartoum" : 2, "stockholm" : 2, "bern" : 2, "damas" : 3,
+              "bangkok": 7, "lomé" : 0, "tunis" : 1, "ankara" : 3, "kyiv" : 3, 
+         "abudhabi" : 4, "london" : 1, "montevideo" : -3, "tachkent" : 5, "caracas" : -4, "hanoi" : 7, "sana" : 3} ;
+      
          function addHours(time, hoursToAdd) {
             // Séparer les heures et les minutes du format donné
             let [hours, minutes] = time.split(':').map(Number);
