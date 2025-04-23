@@ -137,7 +137,7 @@
 
     let capitalOffset = capitalstime[capitalname];
     let finalTime;
-
+/*
     if (localtime < 0) {
         if (capitalOffset < 0) {
             let intermediate = subtractHours(format1, Math.abs(capitalOffset));
@@ -155,7 +155,14 @@
             finalTime = addHours(intermediate, localtime);
         }
     }
+    */
     capitalname = capitalname.charAt(0).toUpperCase() + capitalname.slice(1);
+    if(capitalOffset <0){
+      finalTime = substractHours(format1, Math.abs(capitalOffset));
+    }
+    else{
+      finalTime = addHours(format1, capitalOffset);
+    }
     document.getElementById("texttime").innerHTML = `⏳🌍 ${capitalname} time now is :🕒 ${finalTime} ⏰🎯`;
 }
 const sortedKeys = Object.keys(capitalstime).sort();
